@@ -1,6 +1,6 @@
 {
   "name": "best-pokemon-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Pokemom CLI app in Node.js. The app show pokemon information in command line.",
   "main": "index.js",
   "scripts": {
