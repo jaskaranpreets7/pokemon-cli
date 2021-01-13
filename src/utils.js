@@ -38,6 +38,7 @@ export async function getAllPokemons(args){
                 ])
             })
         }
+        status.stop()
         console.log(table.toString())
     } catch (error) {
         status.stop()
@@ -55,6 +56,7 @@ export async function pokemonBySerialNo( args ){
     status.start()
 
     try {
+
         const response = await axios.get(`${baseURL}/${serialId}`)
 
         const table = new Table({ head: ["Name", "Weight", "Height","Base XP", "Type"], colWidths: [15, 15, 15,15,15], wordWrap:true })
@@ -62,6 +64,7 @@ export async function pokemonBySerialNo( args ){
         const { name, weight, height, base_experience, types } = response.data
         table.push([ name, weight, height, base_experience, getTypes(types) ])
 
+        status.stop()
         console.log(table.toString())
     } catch (error) {
         status.stop()
@@ -91,6 +94,8 @@ export async function pokemonByName(args){
     
         const { id, weight, height, base_experience, types } = response.data
         table.push([ id, weight, height, base_experience, getTypes(types) ])
+
+        status.stop()
         console.log(table.toString())
     } catch (error) {
         status.stop()
