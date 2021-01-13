@@ -1,4 +1,10 @@
 Pokemon CLI in Node.js
 
-A Pokemon CLI app in Node.js.The app show pokemon information in command line.
+A Pokemon CLI app in Node.js. The app show pokemon information in command line.
+
+Usage:
+
+npm i best-pokemon-cli
+
+pokemom --help
 
